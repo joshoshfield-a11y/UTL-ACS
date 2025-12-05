@@ -1,0 +1,44 @@
+Unified Tensor-Logic Framework for Autonomous Code Synthesis (UTL-ACS v1.0)
+Copyright (c) 2025 Taylor Christian Mattheisen. All rights reserved.
+
+## License Summary
+- **Non-Commercial Use**: Free and unrestricted (personal, educational, research, non-profit).
+- **Commercial Use**: Requires paid license (enterprise pricing below).
+
+## Permissions (Non-Commercial)
+You are granted irrevocable, worldwide, royalty-free rights to:
+- Use, reproduce, modify, and create derivative works.
+- Distribute copies or derivatives (with attribution).
+- Perform or display publicly for non-profit purposes.
+
+**Attribution Required**: Include this notice and "Copyright (c) 2025 Taylor Christian Mattheisen (Based on UTL-ACS v1.0)" in all copies/derivatives.
+
+## Commercial License Pricing (Enterprise Tiered Structure)
+| Tier | Annual Revenue | Price | Features |
+|------|----------------|-------|----------|
+| **Startup** | <$100K | $999/year | Single project, 1 developer |
+| **Growth** | $100K-$1M | $4,999/year | 5 projects, 5 developers |
+| **Enterprise** | >$1M | $9,999/year | Unlimited projects, dedicated support |
+| **One-Time** | N/A | $4,999 | Perpetual single project license |
+
+**Volume discounts for 10+ licenses. Custom enterprise terms negotiable.** [memory:1]
+
+**Contact**: ArchitectPrime38@proton.me or platforms (Etsy, Gumroad, Itch.io, Ko-fi).
+
+## Restrictions (All Use)
+- No resale/sublicensing as standalone product.
+- No use in AI training datasets without permission.
+- No military, malware, or illegal applications.
+- Modifications must clearly label origin (e.g., "Fork of UTL-ACS").
+
+## No Warranty
+UTL-ACS provided "AS IS". No warranties express/implied. Author not liable for damages, errors, or fitness for purpose. Validation claims aspirational [memory:1].
+
+## Termination
+Violations auto-terminate rights. Commercial licenses governed by separate agreements.
+
+## Governing Law
+U.S. law applies. Venue: competent U.S. courts.
+
+---
+Primary Contact: ArchitectPrime38@proton.me
