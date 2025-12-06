@@ -1,0 +1,42 @@
+cabal-version:       2.4
+name:                utl-acs
+version:             1.0.0.0
+build-type:          Simple
+
+library
+  exposed-modules:     UTLACS.CoreOntology, UTLACS.TensorLogic, UTLACS.GroundReturn
+  hs-source-dirs:      src
+  default-language:    Haskell2010
+  ghc-options:         -Wall
+  build-depends:
+    base >=4.14 && <5,
+    deepseq,
+    mtl,
+    random,
+    containers
+
+executable utl-acs-exe
+  main-is:             Main.hs
+  hs-source-dirs:      app
+  default-language:    Haskell2010
+  ghc-options:         -Wall
+  build-depends:
+    base >=4.14 && <5,
+    utl-acs,
+    mtl,
+    deepseq,
+    random
+
+test-suite utl-acs-tests
+  type:                exitcode-stdio-1.0
+  main-is:             TensorLogicSpec.hs
+  hs-source-dirs:      tests
+  default-language:    Haskell2010
+  ghc-options:         -Wall
+  build-depends:
+    base >=4.14 && <5,
+    utl-acs,
+    tasty,
+    tasty-hunit,
+    hedgehog,
+    tasty-hedgehog

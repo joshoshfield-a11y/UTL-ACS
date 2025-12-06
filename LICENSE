@@ -1,27 +1,11 @@
-add my e.ail for primary contact  ArchitectPrime38@proton.me
+PolyForm Noncommercial License 1.0.0
 
-## UTL-ACS License Agreement (v1.0 - Updated)
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to use, copy, modify, merge, publish, and distribute the Software, subject to the following conditions:
 
-**Preamble**  
-This License governs the Unified Tensor-Logic Framework for Autonomous Code Synthesis (UTL-ACS v1.0), including its abstract, ontology, operators, equations, tables, and validation program (collectively, the "Work"). The Work is copyrighted by Taylor Christian Mattheisen (© 2025). This License grants permissions for non-commercial use while requiring a paid commercial license for business applications [1].
+1. Noncommercial Use Only. You may not use the Software for commercial purposes. “Commercial purposes” means use of the Software to generate revenue or for financial gain, including but not limited to: developing, marketing, selling, licensing, or offering products or services, whether directly or indirectly.
 
-**Grant of License**  
-- **Free Non-Commercial Use**: You may freely use, copy, modify, distribute, and perform the Work for personal, educational, research, or non-profit purposes without payment. Attribution to the author is required in all copies or derivatives.
-- **Commercial Use**: Any use in a commercial product, service, or revenue-generating activity requires a separate paid license. Contact the author via primary email **ArchitectPrime38@proton.me**, or platforms like Etsy, Gumroad, Itch.io, or Ko-fi for pricing and terms [1].
+2. Commercial Licensing. For commercial use, you must obtain a separate commercial license from the copyright holder. Contact: licensing@example.com.
 
-**Restrictions**  
-- No resale, sublicensing, or bundling of the Work (or derivatives) as a standalone product without permission.
-- Modifications must preserve core concepts like the triadic ontology and ground-return mandate; altered versions require clear labeling (e.g., "Based on UTL-ACS v1.0").
-- Prohibited: Use in AI training datasets, military applications, or malware without explicit written approval.
+3. Notices. You must include the above copyright notice and this license text in all copies or substantial portions of the Software.
 
-**Warranty and Liability**  
-The Work is provided "as is" without warranties of any kind. The author disclaims liability for errors, failures, or damages from use. Validation metrics (e.g., 98% coherence) are aspirational and unverified [1].
-
-**Termination**  
-This License terminates automatically upon violation. Paid commercial licenses follow separate agreements.
-
-**Governing Law**  
-This License is governed by U.S. law. Disputes resolved in courts of competent jurisdiction.
-
-For commercial inquiries or custom licenses, email **ArchitectPrime38@proton.me** or message on listed platforms.
-Citations
+4. No Warranty. THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.

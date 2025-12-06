@@ -1,0 +1,29 @@
+name: UTL-ACS Verification Pipeline (Z_anchor)
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  haskell_test_build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up Haskell (GHC and Cabal)
+        uses: haskell/actions/setup@v2
+        with:
+          ghc-version: '9.4'
+          cabal-version: '3.10'
+
+      - name: Build System
+        run: cabal build all --enable-tests
+
+      - name: Run All Verification Tests (Unit, Property, Integration)
+        run: cabal test all
+
+      - name: Run Z_anchor Simulation Demo
+        run: cabal run utl-acs-exe
