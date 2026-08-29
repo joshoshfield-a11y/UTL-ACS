@@ -1,0 +1,38 @@
+id: MET-UTLACS-001
+kind: metric
+name: "Zero-Error Synthesis Rate"
+underlying_objective: "Generated code that is correct, secure, and generalizes to unseen inputs without runtime errors"
+counter_metrics:
+  - name: "False Verification Rate"
+    why_counter: "Internal isVerified flag may not match external test outcomes"
+    measurement_method: "Independent test suite execution on generated code"
+  - name: "Overfitting to SANITIZE_INPUT"
+    why_counter: "Code may pass security check but fail on other security properties"
+    measurement_method: "Adversarial security testing (OWASP Top 10 injection)"
+  - name: "Haskell-Only Generalization"
+    why_counter: "Convergence proof may not transfer to other languages or runtimes"
+    measurement_method: "Cross-language test: generate equivalent Python/JS and compare error rates"
+  - name: "Compute Budget Exhaustion Rate"
+    why_counter: "High success rate may hide high resource consumption"
+    measurement_method: "Distribution of iterations-to-convergence across problem difficulty levels"
+gaming_paths:
+  - "Generating trivial code that passes SANITIZE_INPUT but does nothing useful"
+  - "Optimizing for isVerified flag rather than actual correctness"
+  - "Selecting intents from training distribution only, avoiding novel problems"
+  - "Tuning generalization threshold J=1.0 to be achievable but meaningless"
+  - "Reporting only successful traces, hiding budget exhaustion failures"
+off_dashboard_audit:
+  method: "Independent software engineering review of generated code on real-world tasks"
+  cadence: "weekly"
+  independent: true
+  human_review: required
+  delayed_outcome_check: required
+expiry:
+  review_after_days: 30
+  randomization: true
+  retirement_condition: "When external test suite achieves same error rate as internal verification"
+reflexivity_risk: "Publishing zero-error rates may cause users to only submit intents the system is known to handle, hiding failure modes"
+status_vector:
+  semantic: 4
+  implementation: 4
+  operational: 1
