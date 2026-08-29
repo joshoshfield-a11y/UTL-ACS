@@ -1,0 +1,98 @@
+# UTL-ACS Mechanism Walk
+# ARCF Explanation Stress Test — Every formal claim must survive mechanism scrutiny.
+
+mechanism_walk:
+  claim: "UTL-ACS achieves zero-error code synthesis via tensor-logic convergence"
+
+  inputs:
+    - natural_language_intent: "User specification for software behavior"
+    - security_directives: "SANITIZE_INPUT and other formal constraints"
+    - compute_budget: "Maximum iterations before halting (1e6)"
+    - type_specifications: "Expected input/output types for generated code"
+
+  internal_states:
+    - latent_void: "Probabilistic search space (latentDensity, searchVector)"
+    - runtime_fabric: "Execution trace, error count, code entropy"
+    - causal_artifact: "Generated code, verification status, generalization score"
+    - z_anchor: "Convergence threshold (J=1.0)"
+    - compute_budget_remaining: "Decrements per iteration"
+
+  transitions:
+    - name: "Security Context Verification (Se)"
+      from: "initial_state"
+      to: "verified_state"
+      guard: "SANITIZE_INPUT in artifact codeContent"
+      failure: "Left 'Security Context VIOLATION'"
+
+    - name: "Type System Check (T)"
+      from: "verified_state"
+      to: "type_checked_state"
+      guard: "expected_type == actual_type"
+      failure: "Left 'Type System Error'"
+
+    - name: "Inference Step (I)"
+      from: "type_checked_state"
+      to: "partial_convergence"
+      action: "Modify latentDensity, update searchVector, decrement computeBudget"
+      side_effects: "executionTrace append, codeEntropyOut update"
+
+    - name: "Z-Anchor Convergence (Z)"
+      from: "partial_convergence"
+      to: "converged_state"
+      guard: "generalization >= 1.0 (J=1.0)"
+      failure: "Trigger refactoring loop (F)"
+
+    - name: "Refactoring Loop (F)"
+      from: "z_anchor_failure"
+      to: "partial_convergence"
+      action: "Reduce latentDensity, perturb searchVector, reset artifact"
+      invariant: "computeBudget > 0"
+
+  outputs:
+    - verified_code: "CausalArtifact with isVerified = True"
+    - execution_trace: "Complete log of all transitions"
+    - convergence_proof: "Generalization score J >= 1.0"
+    - error_report: "If any guard fails, structured error with phase identifier"
+
+  assumptions:
+    - "Compute budget is sufficient for convergence (unproven)"
+    - "Generalization score J=1.0 implies zero-error (unverified externally)"
+    - "SANITIZE_INPUT directive is sufficient for security (scope-limited)"
+    - "Type system is complete for target domain (Haskell-only)"
+
+  observed_links:
+    - "Security context check → codeContent inspection (directly observed)"
+    - "Type check → equality comparison (directly observed)"
+    - "Compute budget decrement → integer arithmetic (directly observed)"
+
+  inferred_links:
+    - "Latent density reduction → improved convergence (inferred from simulation)"
+    - "Search vector perturbation → escape local minima (inferred, not proven)"
+    - "Generalization score → real-world correctness (inferred, not observed)"
+
+  unobserved_links:
+    - "Generated code behavior in production environments"
+    - "Security vulnerabilities not covered by SANITIZE_INPUT"
+    - "Type system gaps for non-Haskell targets"
+    - "Convergence time scaling with problem complexity"
+
+  failure_signatures:
+    - "Security Context VIOLATION: SANITIZE_INPUT missing"
+    - "Type System Error: type mismatch"
+    - "Compute Budget Exhausted: no convergence before 1e6 iterations"
+    - "Z-Anchor Failure: generalization < 1.0 after max iterations"
+
+  falsifier:
+    condition: >
+      Generate a set of natural language intents where UTL-ACS produces
+      code that passes all internal checks but fails on external test cases
+      (independent of the internal generalization score).
+    threshold: ">5% failure rate on held-out test suite"
+
+  status_vector:
+    semantic: 4
+    implementation: 4
+    operational: 1
+    interpretation: >
+      Formal structure is well-defined; implementation verified in simulation;
+      real-world zero-error claim remains unverified outside Haskell domain.
